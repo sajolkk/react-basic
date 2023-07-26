@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, React } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -29,8 +29,21 @@ function App({ locale }) {
         Click on the Vite and React logos to learn more
       </p>
       <h1>Time: {new Date().toLocaleTimeString(locale)}</h1>
+      {/* <h1><Clock localet="bn-BD" />Time</h1> */}
     </>
   )
 }
 
-export default App
+// class Clock extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <h1 className='heading'>
+//           <span className='text'>{this.props.children}: {new Date().toLocaleTimeString(this.props.localet)} </span>
+//         </h1>
+//       </div>
+//     );
+//   }
+// }
+
+export default App;
