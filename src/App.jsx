@@ -1,7 +1,8 @@
-import { useState, React } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Clock from './Component/Clock'
 
 function App({ locale }) {
   const [count, setCount] = useState(0)
@@ -29,21 +30,10 @@ function App({ locale }) {
         Click on the Vite and React logos to learn more
       </p>
       <h1>Time: {new Date().toLocaleTimeString(locale)}</h1>
-      {/* <h1><Clock localet="bn-BD" />Time</h1> */}
+      <h2>Hey, It's my first react project</h2>
+      <Clock localet="bd-BD" >Time:</Clock >
     </>
   )
 }
-
-// class Clock extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <h1 className='heading'>
-//           <span className='text'>{this.props.children}: {new Date().toLocaleTimeString(this.props.localet)} </span>
-//         </h1>
-//       </div>
-//     );
-//   }
-// }
 
 export default App;

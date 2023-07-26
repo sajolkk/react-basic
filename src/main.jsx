@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <App locale="bn-BD" />
+    <App />
   </React.StrictMode>,
 )
