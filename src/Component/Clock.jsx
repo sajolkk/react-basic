@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import Button from './Button';
 
 class Clock extends React.Component {
     // constructor(props) {
@@ -39,7 +40,7 @@ class Clock extends React.Component {
                 <h1 className='heading'>
                     <span className='text'>{this.props.children}: {date.toLocaleTimeString(language)} </span>
                 </h1>
-                <button onClick={() => this.changeLanguage(language)}>Change Language</button>
+                <Button change={this.changeLanguage} language={language}>Change Language</Button>
             </div>
         );
     }
