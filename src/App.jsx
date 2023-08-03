@@ -5,6 +5,7 @@ import './App.css'
 import Clock from './Component/Clock'
 import ClockList from './Component/ClockList'
 import Form from './Component/Form'
+import TemparatureCalculator from './Component/TemparatureCalculator'
 
 function App({ locale }) {
   const [count, setCount] = useState(0)
@@ -21,6 +22,9 @@ function App({ locale }) {
       <Clock>Time</Clock >
       <ClockList quantities={quantities}></ClockList>
       <Form></Form>
+
+      {/* temparature calculator */}
+      <TemparatureCalculator />
     </>
   )
 }
