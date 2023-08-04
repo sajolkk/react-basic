@@ -6,6 +6,7 @@ import Clock from './Component/Clock'
 import ClockList from './Component/ClockList'
 import Form from './Component/Form'
 import TemparatureCalculator from './Component/TemparatureCalculator'
+import TextInhe from './Component/TextInhe'
 
 function App({ locale }) {
   const [count, setCount] = useState(0)
@@ -25,6 +26,12 @@ function App({ locale }) {
 
       {/* temparature calculator */}
       <TemparatureCalculator />
+
+      <h1>Inheritance</h1>
+      <TextInhe />
+
+      <br />
+      <h1>Composition</h1>
     </>
   )
 }
