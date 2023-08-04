@@ -7,6 +7,9 @@ import ClockList from './Component/ClockList'
 import Form from './Component/Form'
 import TemparatureCalculator from './Component/TemparatureCalculator'
 import TextInhe from './Component/TextInhe'
+import Text from './Component/Text'
+import Emoji from './Component/Emoji'
+import Bracket from './Component/Bracket'
 
 function App({ locale }) {
   const [count, setCount] = useState(0)
@@ -32,6 +35,19 @@ function App({ locale }) {
 
       <br />
       <h1>Composition</h1>
+      <p>Single</p>
+      <Emoji >
+        {({ addEmoji }) => <Text addEmoji={addEmoji} />}
+      </Emoji>
+      <p>Multiple</p>
+      <Emoji >
+        {({ addEmoji }) => (
+          <Bracket>
+            {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+          </Bracket>
+        )}
+      </Emoji>
+
     </>
   )
 }
